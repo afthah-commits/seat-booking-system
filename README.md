@@ -77,3 +77,52 @@ Explicitly releases a set of held seats back to the available pool.
 
 ## 📺 Testing Utility (Frontend)
 Accessible at `http://127.0.0.1:8000/`. Use this dashboard to visually confirm the backend's real-time state transitions and activity logging during your review.
+
+---
+
+## 🌐 Deployment
+
+This application is production-ready and can be deployed to various platforms:
+
+### Quick Deploy Options:
+- **Render** (Recommended - Free tier available)
+- **Railway** (Fast deployments)
+- **Heroku** (Classic PaaS)
+
+### Deployment Guides:
+- 📖 **[Complete Deployment Guide](GITHUB_DEPLOYMENT.md)** - Detailed instructions for all platforms
+- ⚡ **[Quick Deploy Reference](QUICK_DEPLOY.md)** - Essential commands and quick start
+
+### Production Features:
+- ✅ PostgreSQL database support
+- ✅ Whitenoise for static file serving
+- ✅ Environment-based configuration
+- ✅ Security settings for production
+- ✅ Gunicorn WSGI server
+- ✅ Automatic migrations on deploy
+
+---
+
+## 📚 Documentation
+
+- **[Setup Guide](SETUP_COMPLETE.md)** - Detailed setup instructions
+- **[API Documentation](API_DOCUMENTATION.md)** - Complete API reference
+- **[Deployment Guide](DEPLOYMENT.md)** - Production deployment details
+- **[Project Summary](PROJECT_SUMMARY.md)** - Comprehensive project overview
+- **[Checklist](CHECKLIST.md)** - Development and deployment checklist
+
+---
+
+## 🏆 Key Features
+
+- ✅ **Atomic State Machine** - AVAILABLE → HELD → BOOKED transitions
+- ✅ **Row-Level Locking** - Prevents race conditions
+- ✅ **10-Minute Hold TTL** - Automatic expiry
+- ✅ **Concurrent Booking Protection** - Verified with stress tests
+- ✅ **Production Ready** - Complete deployment guides
+- ✅ **Well Documented** - Comprehensive guides and API docs
+
+---
+
+**Built with ❤️ using Django**  
+**Status:** ✅ PRODUCTION READY
