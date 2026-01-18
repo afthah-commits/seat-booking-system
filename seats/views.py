@@ -27,16 +27,24 @@ def list_shows(request):
         except ValueError:
             pass
 
-    data = [{
+    data = []
+    for show in shows:
+        poster_url = None
+        try:
+            if show.movie.poster:
+                poster_url = show.movie.poster.url
+        except Exception:
+            poster_url = None
+
+        data.append({
             'id': show.id,
             'movie': show.movie.title,
             'screen': show.screen.name,
             'start_time': show.start_time.isoformat(),
             'end_time': show.end_time.isoformat(),
             'price': str(show.base_price),
-            'poster_url': show.movie.poster.url if show.movie.poster else None
-        }
- for show in shows]
+            'poster_url': poster_url
+        })
     return JsonResponse({'shows': data})
 
 
