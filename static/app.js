@@ -142,6 +142,12 @@ function renderSeats(seats) {
             seatEl.dataset.row = seat.row;
             seatEl.dataset.number = seat.number;
 
+            // Preserve selection state across refreshes
+            const seatId = `${seat.row}${seat.number}`;
+            if (selectedSeats.some(s => s.id === seatId)) {
+                seatEl.classList.add('selected');
+            }
+
             seatEl.onclick = () => toggleSeatSelection(seatEl, seat);
 
             rowEl.appendChild(seatEl);

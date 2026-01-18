@@ -20,12 +20,15 @@ from django.conf import settings
 from django.conf.urls.static import static
 from seats.views import theatre_dashboard
 
+from django.views.static import serve
+from django.urls import re_path
+
 urlpatterns = [
     path('', theatre_dashboard, name='dashboard'),
     path('admin/', admin.site.urls),
     path('api/seats/', include('seats.urls')),
+    re_path(r'^media/(?P<path>.*)$', serve, {'document_root': settings.MEDIA_ROOT}),
 ] 
 
 if settings.DEBUG:
     urlpatterns += static(settings.STATIC_URL, document_root=settings.STATICFILES_DIRS[0])
-    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
