@@ -23,9 +23,9 @@ class Command(BaseCommand):
         s2 = Screen.objects.create(name="Screen 2 (Indie Hall)", description="30 seats cozy hall")
 
         # 2. Create Movies
-        m1 = Movie.objects.create(title="Avatar: The Way of Water", duration_mins=192)
-        m2 = Movie.objects.create(title="Inception", duration_mins=148)
-        m3 = Movie.objects.create(title="Top Gun: Maverick", duration_mins=130)
+        m1 = Movie.objects.create(title="Avatar: The Way of Water", duration_mins=192, poster="posters/avatar.png")
+        m2 = Movie.objects.create(title="Inception", duration_mins=148, poster="posters/inception.png")
+        m3 = Movie.objects.create(title="Top Gun: Maverick", duration_mins=130, poster="posters/top_gun.png")
 
         # 3. Create ShowTimes
         shows = [
