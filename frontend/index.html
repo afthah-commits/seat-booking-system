@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CinemaElite | Premium Seat Management</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="dashboard" id="main-dashboard" style="display: none;">
+        <header>
+            <h1>Movie Seat Management System</h1>
+            <p class="movie-meta" id="header-date">Real-time Theatre Status</p>
+        </header>
+
+        <div class="dashboard-layout">
+            <div class="main-content">
+                <div class="movie-header">
+                    <img src="" alt="Movie Poster" class="movie-poster" id="movie-poster">
+                    <div class="movie-info">
+                        <h2 id="movie-title">Loading Show...</h2>
+                        <div class="movie-meta">
+                            <span id="movie-screen">Theatre Loading</span> &bull;
+                            <span id="movie-time">Time Loading</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="stats-container">
+                    <div class="stat-card available">
+                        <span class="stat-value" id="stats-available">0</span>
+                        <span class="stat-label">Available Seats</span>
+                    </div>
+                    <div class="stat-card held">
+                        <span class="stat-value" id="stats-held">0</span>
+                        <span class="stat-label">Held (Reserved)</span>
+                    </div>
+                    <div class="stat-card booked">
+                        <span class="stat-value" id="stats-booked">0</span>
+                        <span class="stat-label">Booked Seats</span>
+                    </div>
+                </div>
+
+                <div class="screen-area">
+                    <div class="screen-curve"></div>
+                    <span class="screen-label">SCREEN</span>
+
+                    <div class="seat-grid" id="seat-grid">
+                        <!-- Seats will be injected here -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="sidebar">
+                <div class="activity-log">
+                    <h3>Activity Log</h3>
+                    <div id="log-content">
+                        <div class="log-item">
+                            <div class="log-dot" style="background: var(--accent-primary);"></div>
+                            <div>
+                                <div class="log-msg">System initialized...</div>
+                                <div class="log-time">Just now</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="seat-legend">
+            <div class="legend-item">
+                <div class="dot available"></div> Available
+            </div>
+            <div class="legend-item">
+                <div class="dot held"></div> Reserved
+            </div>
+            <div class="legend-item">
+                <div class="dot booked"></div> Booked
+            </div>
+        </div>
+
+        <div class="controls">
+            <div class="total-summary">
+                <div class="total-seats" id="selection-summary">No seats selected</div>
+                <div class="total-price" id="total-price">$0.00</div>
+            </div>
+            <button class="btn btn-primary" id="btn-book" disabled>Confirm Booking</button>
+        </div>
+    </div>
+
+    <!-- Selection Modal / Overlay -->
+    <div id="loading-overlay"
+        style="position: fixed; inset: 0; background: var(--bg-deep); display: flex; align-items: center; justify-content: center; z-index: 100;">
+        <div style="text-align: center;">
+            <div
+                style="width: 50px; height: 50px; border: 4px solid var(--accent-primary); border-top-color: transparent; border-radius: 50%; animation: spin 1s linear infinite; margin: 0 auto 20px;">
+            </div>
+            <p style="color: var(--text-muted); font-weight: 600;">ACCESSING THEATRE SYSTEMS...</p>
+        </div>
+    </div>
+
+    <style>
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
