@@ -89,10 +89,6 @@ This application is production-ready and can be deployed to various platforms:
 - **Railway** (Fast deployments)
 - **Heroku** (Classic PaaS)
 
-### Deployment Guides:
-- 📖 **[Complete Deployment Guide](GITHUB_DEPLOYMENT.md)** - Detailed instructions for all platforms
-- ⚡ **[Quick Deploy Reference](QUICK_DEPLOY.md)** - Essential commands and quick start
-
 ### Production Features:
 - ✅ PostgreSQL database support
 - ✅ Whitenoise for static file serving
@@ -100,16 +96,6 @@ This application is production-ready and can be deployed to various platforms:
 - ✅ Security settings for production
 - ✅ Gunicorn WSGI server
 - ✅ Automatic migrations on deploy
-
----
-
-## 📚 Documentation
-
-- **[Setup Guide](SETUP_COMPLETE.md)** - Detailed setup instructions
-- **[API Documentation](API_DOCUMENTATION.md)** - Complete API reference
-- **[Deployment Guide](DEPLOYMENT.md)** - Production deployment details
-- **[Project Summary](PROJECT_SUMMARY.md)** - Comprehensive project overview
-- **[Checklist](CHECKLIST.md)** - Development and deployment checklist
 
 ---
 
