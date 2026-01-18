@@ -3,6 +3,9 @@ set -e
 
 echo "🚀 Starting Deployment Script..."
 
+echo "🎨 Collecting Static Files..."
+python manage.py collectstatic --noinput
+
 echo "📦 Running Migrations..."
 python manage.py migrate
 
